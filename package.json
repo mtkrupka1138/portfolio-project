@@ -35,5 +35,10 @@
     "parallelshell": "3.0.1",
     "rimraf": "^3.0.2",
     "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
