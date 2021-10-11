@@ -24,6 +24,20 @@ header {
     border-radius: 10px;
 }
 
+.dailySquare {
+    background-color: white;
+    width: 30%;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.dailySquare:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
 label, p {
     color: #B1B1B1;
     text-transform: lowercase;
