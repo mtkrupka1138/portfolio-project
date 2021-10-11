@@ -9,8 +9,27 @@ body, h1, h2, h3, h4, h5 {
     color: white;
 }
 
+header {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .login-container {
     width: 80%;
     background-color: #CFEDFE;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label, p {
+    color: #B1B1B1;
+    text-transform: lowercase;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
