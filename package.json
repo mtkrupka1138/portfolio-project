@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-project",
+  "version": "1.0.0",
+  "description": "Bootcamp Portfolio Project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtkrupka1138/portfolio-project.git"
+  },
+  "author": "MTK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtkrupka1138/portfolio-project/issues"
+  },
+  "homepage": "https://github.com/mtkrupka1138/portfolio-project#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
