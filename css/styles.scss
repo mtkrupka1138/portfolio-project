@@ -109,3 +109,23 @@ footer {
     border-radius: 15px;
 }
 
+// for radio buttons
+input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #1FBED6;
+  }
+  
+  input[type="radio"]:checked ~ span {
+    color: white;
+  }
+  
+  label span {
+    position: absolute;
+    font-size: 15px;
+    color: #1FBED6;
+    padding: 5px;
+  }
+
+
