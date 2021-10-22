@@ -24,16 +24,6 @@ header {
     border-radius: 10px;
 }
 
-// .outer-square {
-//     display: grid;
-//     grid-template-columns: 20px 40px 60px 40px 20px;
-//     grid-template-rows: 20px 40px 60px 40px 20px;
-//     column-gap: 1px;
-//     row-gap: 1px;
-//     background-color: white;
-//     width: 40%;
-// }
-
 .square-container {
     width: 300px;
     height: 300px;
@@ -42,10 +32,6 @@ header {
     grid-template-rows: 20px 40px auto 40px 20px;
     background-color: #004A74;
     margin: 0 auto;
-}
-
-.square-item {
-
 }
 
 .main-square {
@@ -57,29 +43,13 @@ header {
     border-radius: 10px;
 }
 
-// .daily-square {
-//     background-color: white;
-//     width: 30%;
-//     border-radius: 20px;
-//     margin: 0 auto;
-//     margin-bottom: 50px;
-// }
-
-// .daily-square:after {
-//     content: "";
-//     display: block;
-//     padding-bottom: 100%;
-//   }
-
-//   .square-content {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//   }
-
 label, p {
     color: #B1B1B1;
     text-transform: lowercase;
+}
+
+.row:first-child {
+    padding-right: 20px;
 }
 
 input {
@@ -109,7 +79,6 @@ footer {
     border-radius: 15px;
 }
 
-// for radio buttons
 input[type="radio"] {
     width: 30px;
     height: 30px;
@@ -124,8 +93,9 @@ input[type="radio"] {
   label span {
     position: absolute;
     font-size: 15px;
-    color: #1FBED6;
-    padding: 5px;
+    color: #B1B1B1;
+    padding-left: 12px;
+    padding-top: 3px;
   }
 
 
