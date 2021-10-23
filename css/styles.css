@@ -28,8 +28,8 @@ header {
     width: 500px;
     height: 500px;
     display: grid;
-    grid-template-columns: 50px 60px auto 60px 50px;
-    grid-template-rows: 50px 60px auto 60px 50px;
+    grid-template-columns: 50px 80px auto 80px 50px;
+    grid-template-rows: 50px 80px auto 80px 50px;
     background-color: #004A74;
     margin: 0 auto;
 }
@@ -44,20 +44,40 @@ header {
     text-align: center;
 }
 
+#main-square {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+
 .main-square input {
     border: 0px;
     padding: 100px 5px;
     width: 100%;
     text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
-#square2-item {
+.square-item {
+    margin: 5px;
+}
+
+.inside-square-item {
     width: 80%;
     height: 80%;
     margin: 0 auto;
     background-color: #F2E6E6;
 }
 
+.inner-square {
+    background-color: #F2E6E6;
+    margin: 10px;
+}
 
 label, p {
     color: #B1B1B1;
@@ -81,12 +101,22 @@ input {
     font-size: 1.5rem;
 }
 
+.btn:hover {
+    color: #F2E6E6;
+}
+
 .typ-btn {
     background-color: #27739D;
     color: white;
     font-size: 1.2rem;
     border-radius: 10px;
     padding: 10px 20px;
+}
+
+.form-select {
+    background-color: #F2E6E6;
+    border: none;
+    width: 100%;
 }
 
 hr {
@@ -131,7 +161,6 @@ input[type="radio"] {
   .btn-row {
       padding-top: 30px;
   }
-
 
   @media (min-width: 993px) {
     .login-container,
