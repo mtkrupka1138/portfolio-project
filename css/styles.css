@@ -44,11 +44,24 @@ header {
     grid-row-start: 2;
     grid-row-end: 5;
     border-radius: 10px;
+    text-align: center;
 }
+
+.main-square input {
+    border: 0px;
+    padding: 100px 5px;
+    width: 100%;
+    text-align: center;
+}
+
 
 label, p {
     color: #B1B1B1;
     text-transform: lowercase;
+}
+
+.mini-p {
+    font-size: 12px;
 }
 
 .typ-quest {
@@ -114,6 +127,7 @@ input[type="radio"] {
   .btn-row {
       padding-top: 30px;
   }
+
 
   @media (min-width: 993px) {
     .login-container,
