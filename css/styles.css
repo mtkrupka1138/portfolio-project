@@ -16,9 +16,6 @@ header {
     padding-bottom: 50px;
 }
 
-
-
-
 .login-container,
 .profile-container {
     width: 70%;
@@ -28,11 +25,11 @@ header {
 }
 
 .square-container {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     display: grid;
-    grid-template-columns: 20px 40px auto 40px 20px;
-    grid-template-rows: 20px 40px auto 40px 20px;
+    grid-template-columns: 50px 60px auto 60px 50px;
+    grid-template-rows: 50px 60px auto 60px 50px;
     background-color: #004A74;
     margin: 0 auto;
 }
@@ -52,6 +49,13 @@ header {
     padding: 100px 5px;
     width: 100%;
     text-align: center;
+}
+
+#square2-item {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #F2E6E6;
 }
 
 
