@@ -178,7 +178,7 @@ input[type="radio"] {
         padding: 40px;
     }
     .login-container {
-        width: 40%;
+        width: 60%;
         padding: 20px;
     }
   }
@@ -192,7 +192,7 @@ input[type="radio"] {
         margin-left: 20px;
     }
     .login-container {
-        width: 40%;
+        width: 80%;
         padding: 20px;
     }
 }
@@ -206,7 +206,7 @@ input[type="radio"] {
         margin-left: 20px;
     }
     .login-container {
-        width: 40%;
+        width: 85%;
         padding: 20px;
     }
     .typ-btn {
