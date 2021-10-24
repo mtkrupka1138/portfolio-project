@@ -16,12 +16,17 @@ header {
     padding-bottom: 50px;
 }
 
-.login-container,
-.profile-container {
-    width: 70%;
+.login-container {
+    width: 40%;
     background-color: #CFEDFE;
-    padding: 30px;
     border-radius: 10px;
+}
+
+.profile-container {
+    width: 80%;
+    background-color: #CFEDFE;
+    border-radius: 10px;
+    margin: 20px auto 40px auto;
 }
 
 .square-container {
@@ -89,7 +94,7 @@ label, p {
 }
 
 .typ-quest {
-    padding-right: 20px;
+    margin-left: 90px;
 }
 
 input {
@@ -129,7 +134,7 @@ hr {
 }
 
 footer {
-    padding: 75px 50px;
+    padding: 40px 50px 20px 50px;
 }
 
 .footer-btn {
@@ -162,26 +167,46 @@ input[type="radio"] {
       padding-top: 30px;
   }
 
+  .sub-section-title,
+  .mini-p {
+      color: #888686;
+  }
+
   @media (min-width: 993px) {
-    .login-container,
     .profile-container {
-        width: 50%;
+        width: 80%;
+        padding: 40px;
+    }
+    .login-container {
+        width: 40%;
         padding: 20px;
     }
   }
 
   @media (min-width: 768px) and (max-width: 992px) {
-    .login-container,
     .profile-container {
         width: 80%;
+        padding: 20px;
+    }
+    .typ-quest {
+        margin-left: 20px;
+    }
+    .login-container {
+        width: 40%;
         padding: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    .login-container,
     .profile-container {
         width: 85%;
+        padding: 20px;
+    }
+    .typ-quest {
+        margin-left: 20px;
+    }
+    .login-container {
+        width: 40%;
         padding: 20px;
     }
     .typ-btn {
