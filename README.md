@@ -1,5 +1,6 @@
 # Bootcamp Portfolio Project
 Daily Square Minimalist Journal
+
 Original concept by: Michal Korzonek
 
 References:
