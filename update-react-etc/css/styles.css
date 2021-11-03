@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* General - for login and profile pages */
+body, h1, h2, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  background-color: #004A74;
+  color: white; }
+
+header {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.login-container {
+  width: 40%;
+  background-color: #CFEDFE;
+  border-radius: 10px; }
+
+.profile-container {
+  width: 80%;
+  background-color: #CFEDFE;
+  border-radius: 10px;
+  margin: 20px auto 40px auto; }
+
+/* Daily Square */
+.square-container {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 50px 80px auto 80px 50px;
+  grid-template-rows: 50px 80px auto 80px 50px;
+  background-color: #004A74;
+  margin: 0 auto; }
+
+.main-square {
+  background-color: white;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  border-radius: 10px;
+  text-align: center; }
+
+#main-square {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px; }
+
+.main-square input {
+  border: 0px;
+  padding: 100px 5px;
+  width: 100%;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4; }
+
+.square-item {
+  margin: 5px; }
+
+#square14 input {
+  border: 0px;
+  background-color: #F2E6E6;
+  text-align: center;
+  width: 100%; }
+
+.inside-square-item {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  background-color: #F2E6E6; }
+
+.inner-square {
+  background-color: #F2E6E6;
+  margin: 10px; }
+
+/* Modal style */
+.modal-title {
+  background-color: white;
+  color: #004A74;
+  text-transform: lowercase; }
+
+.btn-link {
+  text-decoration: none;
+  color: white; }
+
+.card-body {
+  color: #888686;
+  text-transform: lowercase;
+  font-size: 10px; }
+
+/* Miscellaneous */
+/* Profile Creation Form & Typical Buttons */
+label, p {
+  color: #B1B1B1;
+  text-transform: lowercase; }
+
+.mini-p {
+  font-size: 12px; }
+
+.typ-quest {
+  margin-left: 90px; }
+
+input {
+  border-radius: 25px; }
+
+.form-title {
+  text-align: center;
+  font-size: 1.5rem; }
+
+.btn:hover {
+  color: #F2E6E6; }
+
+.typ-btn {
+  background-color: #27739D;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 10px 20px; }
+
+.form-select {
+  background-color: #F2E6E6;
+  border: none;
+  width: 100%; }
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.section-title {
+  padding-bottom: 50px; }
+
+input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  border: 2px solid #1FBED6; }
+
+input[type="radio"]:checked ~ span {
+  color: white; }
+
+label span {
+  position: absolute;
+  font-size: 15px;
+  color: #B1B1B1;
+  padding-left: 12px;
+  padding-top: 3px; }
+
+.btn-row {
+  padding-top: 30px; }
+
+.sub-section-title,
+.mini-p {
+  color: #888686; }
+
+/* Footer */
+footer {
+  padding: 40px 50px 20px 50px; }
+
+.footer-btn {
+  background-color: #032031;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 15px; }
+
+/* Responsiveness */
+@media (min-width: 993px) {
+  .profile-container {
+    width: 80%;
+    padding: 40px; }
+  .login-container {
+    width: 60%;
+    padding: 20px; } }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .profile-container {
+    width: 80%;
+    padding: 20px; }
+  .typ-quest {
+    margin-left: 20px; }
+  .login-container {
+    width: 80%;
+    padding: 20px; } }
+
+@media (max-width: 768px) {
+  .profile-container {
+    width: 85%;
+    padding: 20px; }
+  .typ-quest {
+    margin-left: 20px; }
+  .login-container {
+    width: 85%;
+    padding: 20px; }
+  .typ-btn {
+    margin-bottom: 10px; } }
