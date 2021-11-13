@@ -18,10 +18,96 @@ header {
     padding-bottom: 50px;
 }
 
-.login-container {
-    width: 40%;
+.login-container-grid {
+    width: 60%;
+    height: 350px;
     background-color: #CFEDFE;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 8% 17.5% 8% 6.5% 20.5% 31.5% 8%;
+    grid-template-rows: 14.3% 9.5% 9.5% 9.5% 9.5% 19.1% 14.3% 14.3%;
+}
+
+.form-grid {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 8;
+}
+
+.login-title {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0 auto;
+}
+
+.input-row-user {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+}
+
+.input-row-pw {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+}
+
+.input-row-user label {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+
+.input-row-user .input-region {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.input-row-pw label {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.input-row-pw .input-region {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.button-row {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    display: grid;
+}
+
+.button-account {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.button-enter {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
 }
 
 .profile-container {
