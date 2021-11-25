@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import Login from '.../components/LoginComponent';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConfigureStore } from './redux/configureStore';
+import Login from './components/LoginComponent';
 import './App.css';
 
+const store = ConfigureStore();
+
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
+    render() {
+        return (
+        <Provider store={store}>
+          <BrowserRouter>
+              <div className="App">
+                  <Login />
+              </div>
+          </BrowserRouter>
+        </Provider>
+        );
     };
-
-  render() {
-      return (
-        <div className="root"></div>
-      );
-  }
 }
 
 export default App;
