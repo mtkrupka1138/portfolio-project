@@ -4,20 +4,65 @@ import { Button, Col, Row, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
+const required = val => val && val.length;
+const maxLength = len => val => !val || (val.length <= len);
+const minLength = len => val => val && (val.length >= len);
+const isNumber = val => !isNaN(+val);
+const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+
 
 class Login extends Component {
+
     constructor(props) {
         super(props);
+
         this.state = {
+            firstName: '',
+            lastName: '',
+            phoneNum: '',
+            email: '',
+            agree: false,
+            contactType: 'By Phone',
+            feedback: '',
+            touched: {
+                firstName: false,
+                lastName: false,
+                phoneNum: false,
+                email: false
+            }
+        };
+      
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
-        }
-    };
 
-    // submitLogin(e) {}
+    handleBlur = (field) => () => {
+        this.setState({
+            touched: {...this.state.touched, [field]: true}
+        });
+    }
+
+    handleInputChange(event) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+    
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit(values) {
+        console.log("Current state is: " + JSON.stringify(values));
+        alert("Current state is: " + JSON.stringify(values));
+    }
 
     render() {
+
         return (
-            <React.Fragment>
+            <div className="container">
+
                 <Header />
 
                 <div className="login-container container">
@@ -47,8 +92,10 @@ class Login extends Component {
                     </div>
                 </form>
                 </div>
-
-                <LocalForm onSubmit={values => this.handleSubmit(values)}>
+    
+                <div className="row row-content">
+                    <div className="col-md-10">
+                    <LocalForm onSubmit={values => this.handleSubmit(values)}>
                             <Row className="form-group">
                                 <Label htmlFor="firstName" md={2}>First Name</Label>
                                 <Col md={10}>
@@ -187,15 +234,13 @@ class Login extends Component {
                                 </Col>
                             </Row>
                         </LocalForm>
-
-
-
-
-
-            </React.Fragment>
+                    </div>
+                </div>
+            </div>
         );
-    }
-
+    }  
 }
+
+   
 
 export default Login;
