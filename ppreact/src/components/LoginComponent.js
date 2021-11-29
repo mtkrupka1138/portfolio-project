@@ -17,18 +17,11 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            firstName: '',
-            lastName: '',
-            phoneNum: '',
             email: '',
-            agree: false,
-            contactType: 'By Phone',
-            feedback: '',
+            password: '',
             touched: {
-                firstName: false,
-                lastName: false,
-                phoneNum: false,
-                email: false
+                email: false,
+                password: false,
             }
         };
       
@@ -46,7 +39,7 @@ class Login extends Component {
     handleInputChange(event) {
         const target = event.target;
         const name = target.name;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const value = target.value;
     
         this.setState({
             [name]: value
@@ -69,28 +62,28 @@ class Login extends Component {
                 <div className="form-title">
                     <p>login</p>
                 </div>
-                <form>
-                    <div className="form-group row">
-                        <label for="email" className="col-xs col-md-4 col-form-label offset-1">user</label>
+                <LocalForm onSubmit={values => this.handleSubmit(values)} > 
+                    <Row className="form-group">
+                        <Label htmlFor="email" className="col-xs col-md-4 col-form-label offset-1">user</Label>
                         <div className="col-xs col-md-5">
-                            <input type="text" className="form-control" />
+                            <Control.text model=".email" id="email" name="email" className="form-control" validators={{required, minLength: minLength(2), maxLength: maxLength(15) }}/>
                         </div>
-                    </div>
-                    <div className="form-group row">
-                        <label for="password" className="col-xs col-md-4 col-form-label offset-1">password</label>
+                    </Row>
+                    <Row className="form-group">
+                        <Label htmlFor="password" className="col-xs col-md-4 col-form-label offset-1">password</Label>
                         <div className="col-xs col-md-5">
-                            <input type="password" className="form-control" id="password" />
+                            <Control.text model=".password" id="password" name="password" className="form-control" validators={{required, minLength: minLength(2), maxLength: maxLength(15) }}/> 
                         </div>
-                    </div>
-                    <div className="form-group row btn-row justify-content-center">
+                    </Row>
+                    <Row className="form-group btn-row justify-content-center">
                         <div className="col-4">
                             <a href=""><button type="button" className="btn typ-btn">create profile</button></a>
                         </div>
                         <div className="col-3">
                             <a href=""><button type="button" className="btn typ-btn">enter</button></a>
                         </div>
-                    </div>
-                </form>
+                    </Row>
+                </LocalForm>
                 </div>
     
                 <div className="row row-content">
