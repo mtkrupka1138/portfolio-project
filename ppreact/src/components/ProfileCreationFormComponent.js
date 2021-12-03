@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
-import { Control, LocalForm, Errors } from 'react-redux-form';
-import LoginProfile from './LoginProfileComponent';
+import LoginProfileForm from './LoginProfileFormComponent';
+import SquareBasicsForm from './SquareBasicsFormComponent';
+import CustomSquareForm from './CustomSquareFormComponent';
 
 class ProfileCreationForm extends Component {
     render() {
         return (
             <React.Fragment>
-                <LoginProfile />
+                <LoginProfileForm />
+                <SquareBasicsForm />
+                <CustomSquareForm />
+
             </React.Fragment>
         );
     }

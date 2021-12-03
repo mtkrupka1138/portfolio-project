@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Label } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
-class LoginProfile extends Component {
+class LoginProfileForm extends Component {
     constructor(props) {
         super(props);
         this.toggleModal = this.toggleModal.bind(this);
@@ -102,4 +102,4 @@ class LoginProfile extends Component {
 }
 
 
-export default LoginProfile;
+export default LoginProfileForm;
