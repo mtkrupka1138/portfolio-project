@@ -22,7 +22,7 @@ export const squaresLoading = () => ({
 
 
 
-export const addSquare = () => dispatch => {
+export const postSquare = () => dispatch => {
     
     const newSquare = {
         campsiteId: campsiteId,
@@ -53,8 +53,8 @@ export const addSquare = () => dispatch => {
         .then(response => response.json())
         .then(response => dispatch(addSquare(response)))
         .catch(error => {
-            console.log('add square', error.message);
-            alert('Your square could not be added\nError: ' + error.message);
+            console.log('post square', error.message);
+            alert('Your square could not be posted\nError: ' + error.message);
         });
 };
 

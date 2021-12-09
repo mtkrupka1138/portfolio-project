@@ -6,12 +6,11 @@ import CustomSquareForm from './CustomSquareFormComponent';
 class ProfileCreationForm extends Component {
     render() {
         return (
-            <React.Fragment>
+            <div className="profile-container">
                 <LoginProfileForm />
                 <SquareBasicsForm />
                 <CustomSquareForm />
-
-            </React.Fragment>
+            </div>
         );
     }
 }
