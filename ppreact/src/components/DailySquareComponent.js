@@ -14,10 +14,10 @@ class DailySquare extends Component {
         return (
             <React.Fragment>
                 <div className='square-container'>
-                <SquareInput1 />
-                <SquareInput2 />
-                <SquareInput3 />
-                <SquareInputMainText />
+                    <SquareInput1 />
+                    <SquareInput2 />
+                    <SquareInput3 />
+                    <SquareInputMainText />
                 </div>
             </React.Fragment>
         );
