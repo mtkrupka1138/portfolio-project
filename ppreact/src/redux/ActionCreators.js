@@ -13,7 +13,7 @@ export const addSquares = squares => ({
 
 export const squaresFailed = errMess => ({
     type: ActionTypes.SQUARES_FAILED,
-    payload: errmESS
+    payload: errMess
 });
 
 export const squaresLoading = () => ({
@@ -22,19 +22,11 @@ export const squaresLoading = () => ({
 
 
 
-export const postSquare = () => dispatch => {
+export const postSquare = (squareInfo) => () => {
     
-    const newSquare = {
-        campsiteId: campsiteId,
-        rating: rating,
-        author: author,
-        text: text
-    };
-    newSquare.date = new Date().toISOString();
-
-    return fetch(baseUrl + 'comments', {
+    return fetch(baseUrl + 'squareInfo', {
             method: "POST",
-            body: JSON.stringify(newSquare),
+            body: JSON.stringify(squareInfo),
             headers: {
                 "Content-Type": "application/json"
             }
@@ -51,7 +43,7 @@ export const postSquare = () => dispatch => {
             error => { throw error; }
         )
         .then(response => response.json())
-        .then(response => dispatch(addSquare(response)))
+        .then(response => alert("Thank you for your square.\n " + JSON.stringify(response)))
         .catch(error => {
             console.log('post square', error.message);
             alert('Your square could not be posted\nError: ' + error.message);

@@ -26,7 +26,17 @@ class ProfileCreationForm extends Component {
             touched: {
                 username: false,
                 password: false,
-                passwordValid: false
+                passwordValid: false,
+                daysAlive: false,
+                timeSleepAwake: false,
+                food: false,
+                exercise: false,
+                mainDayText: false,
+                customInput1: false,
+                customInput2: false,
+                customInput3: false,
+                customInput4: false,
+                customInput5: false,
             }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -50,13 +60,13 @@ class ProfileCreationForm extends Component {
     }
 
     handleSubmit(values) {
-         this.props.createProfile(this.props, values.username, values.password);
-     }
+          this.props.postSquare(values);
+      }
     
     render() {
         return (
             <div className="profile-container">
-                <LoginProfileForm />
+                <LoginProfileForm username={this.props.username}/>
                 <SquareBasicsForm />
                 <CustomSquareForm />
                 <div>

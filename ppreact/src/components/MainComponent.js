@@ -10,9 +10,9 @@ import { addSquare, addSquares, squaresFailed, squaresLoading, postSquare, fetch
 
 class Main extends Component {
 
-    componentDidMount() {
-        this.props.fetchSquares();
-    }
+    // componentDidMount() {
+    //     this.props.fetchSquares();
+    // }
 
     render() {
 

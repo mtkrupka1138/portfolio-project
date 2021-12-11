@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Label } from 'reactstrap';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Button, Col, Row, Label } from 'reactstrap';
+import { Control, Form, Errors } from 'react-redux-form';
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
@@ -15,71 +15,45 @@ class LoginProfileForm extends Component {
             username: '',
             password: '',
             passwordValid: '',
-            touched: {
-                usernam: false,
-                password: false,
-                passwordValid: false
-            }
         };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleBlur = (field) => () => {
-        this.setState({
-            touched: {...this.state.touched, [field]: true}
-        });
-    }
-
-    handleInputChange(event) {
-        const target = event.target;
-        const name = target.name;
-        const value = target.value;
-    
-        this.setState({
-            [name]: value
-        });
-    }
-
-    handleSubmit(values) {
-         this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
-    }
 
     render() {
         return (
             <React.Fragment>
                 <div className="form-title">
-            <div className="section-title">
-                <p className="sub-section-title">profile creation</p>
-                <p className="mini-p">set up account information</p>
-            </div>
-        </div>
-        <form>
-            <div className="form-group row">
-                <label for="email" class="col-sm-4 col-form-label">username</label>
-                <div className="col-sm-8">
-                    <input type="text" className="form-control" />
+                    <div className="section-title">
+                        <p className="sub-section-title">profile creation</p>
+                        <p className="mini-p">set up account information</p>
+                    </div>
                 </div>
-            </div>
-            <div className="form-group row">
-                <label for="password" className="col-sm-4 col-form-label">password</label>
-                <div className="col-sm-8">
-                    <input type="password" className="form-control" id="password" />
-                </div>
-            </div>
-            <div className="form-group row">
-                <label for="passwordValid" className="col-sm-4 col-form-label">password validation</label>
-                <div className="col-sm-8">
-                    <input type="passwordValid" className="form-control" id="passwordValid" />
-                </div>
-            </div>
-            <div className="form-group row">
-                <label for="date" className="col-sm-4 col-form-label">birthdate</label>
-                <div className="col-sm-8">
-                    <input type="date" className="form-control" id="birthdate" /> 
-                </div>
-            </div>
-        </form>
+                <Form model="loginform" onSubmit={values => this.handleSubmit(values)}>
+                    <Row className="form-group">
+                        <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
+                        <div className="col-sm-8">
+                            <Control.text model=".username" id="username" name="username" className="form-control" />
+                        </div>
+                    </Row>
+                    <Row className="form-group">
+                        <Label htmlFor="password" className="col-sm-4 col-form-label">password</Label>
+                        <div className="col-sm-8">
+                            <Control.text model=".password" id="password" name="password" className="form-control" />
+                        </div>
+                    </Row>
+                    <div className="form-group row">
+                        <label for="passwordValid" className="col-sm-4 col-form-label">password validation</label>
+                        <div className="col-sm-8">
+                            <input type="passwordValid" className="form-control" id="passwordValid" />
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                        <label for="date" className="col-sm-4 col-form-label">birthdate</label>
+                        <div className="col-sm-8">
+                            <input type="date" className="form-control" id="birthdate" /> 
+                        </div>
+                    </div>
+                </Form>
             </React.Fragment>
         );
     }

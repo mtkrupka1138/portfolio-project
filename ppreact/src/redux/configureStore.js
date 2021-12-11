@@ -1,10 +1,15 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Reducer, initialState } from './reducer';
+import { createForms } from 'react-redux-form';
+import { LoginCredentials } from './forms';
 
 export const ConfigureStore = () => {
     const store = createStore(
-        Reducer,
-        initialState
+        combineReducers({
+            ...createForms({
+                loginForm: LoginCredentials
+            })
+        })
     );
 
     return store;
