@@ -78,3 +78,34 @@ export const fetchSquares = () => dispatch => {
         .then(comments => dispatch(addSquares(comments)))
         .catch(error => dispatch(squaresFailed(error.message)));
 };
+
+
+// collect/post login info
+
+export const getLogin = (loginData) => () => {
+
+    return fetch(baseUrl + 'loginData', {
+            method: "POST",
+            body: JSON.stringify(loginData),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+                    const error = new Error(`Error ${response.status}: ${response.statusText}`);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => { throw error; }
+        )
+        .then(response => response.json())
+        .then(response => alert("Thank you for your login data.\n " + JSON.stringify(response)))
+        .catch(error => {
+            console.log('post login data', error.message);
+            alert('Your login data could not be posted\nError: ' + error.message);
+        });
+};

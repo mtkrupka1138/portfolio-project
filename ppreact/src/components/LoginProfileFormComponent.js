@@ -14,36 +14,36 @@ class LoginProfileForm extends Component {
         this.state = {
             username: '',
             password: '',
+            passwordValid: '',
             touched: {
-                rating: false,
-                author: false,
-                text: false
+                usernam: false,
+                password: false,
+                passwordValid: false
             }
         };
-        // this.handleInputChange = this.handleInputChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // handleBlur = (field) => () => {
-    //     this.setState({
-    //         touched: {...this.state.touched, [field]: true}
-    //     });
-    // }
+    handleBlur = (field) => () => {
+        this.setState({
+            touched: {...this.state.touched, [field]: true}
+        });
+    }
 
-    // handleInputChange(event) {
-    //     const target = event.target;
-    //     const name = target.name;
-    //     const value = target.value;
+    handleInputChange(event) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
     
-    //     this.setState({
-    //         [name]: value
-    //     });
-    // }
+        this.setState({
+            [name]: value
+        });
+    }
 
-    // handleSubmit(values) {
-    //     this.toggleModal();
-    //     this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
-    // }
+    handleSubmit(values) {
+         this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
+    }
 
     render() {
         return (
@@ -68,9 +68,9 @@ class LoginProfileForm extends Component {
                 </div>
             </div>
             <div className="form-group row">
-                <label for="password" className="col-sm-4 col-form-label">password validation</label>
+                <label for="passwordValid" className="col-sm-4 col-form-label">password validation</label>
                 <div className="col-sm-8">
-                    <input type="password" className="form-control" id="passwordValid" />
+                    <input type="passwordValid" className="form-control" id="passwordValid" />
                 </div>
             </div>
             <div className="form-group row">
