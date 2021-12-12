@@ -13,33 +13,33 @@ class ProfileCreationForm extends Component {
         this.state = {
             username: '',
             password: '',
-            // passwordValid: '',
-            // // basic square
-            // daysAlive: false,
-            // timeSleepAwake: false,
-            // food: false,
-            // exercise: false,
-            // mainDayText: '',
-            // // custom square
-            // customInput1: '',
-            // customInput2: '',
-            // customInput3: '',
-            // customInput4: '',
-            // customInput5: '',
+            passwordValid: '',
+            // basic square
+            daysAlive: false,
+            timeSleepAwake: false,
+            food: false,
+            exercise: false,
+            mainDayText: '',
+            // custom square
+            customInput1: '',
+            customInput2: '',
+            customInput3: '',
+            customInput4: '',
+            customInput5: '',
             touched: {
                 username: false,
                 password: false,
-                // passwordValid: false,
-                // daysAlive: false,
-                // timeSleepAwake: false,
-                // food: false,
-                // exercise: false,
-                // mainDayText: false,
-                // customInput1: false,
-                // customInput2: false,
-                // customInput3: false,
-                // customInput4: false,
-                // customInput5: false,
+                passwordValid: false,
+                daysAlive: false,
+                timeSleepAwake: false,
+                food: false,
+                exercise: false,
+                mainDayText: false,
+                customInput1: false,
+                customInput2: false,
+                customInput3: false,
+                customInput4: false,
+                customInput5: false,
             }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -55,7 +55,7 @@ class ProfileCreationForm extends Component {
     handleInputChange(event) {
         const target = event.target;
         const name = target.name;
-        const value = target.value;
+        const value = target.type === 'radio' ? target.selected : target.value;
     
         this.setState({
             [name]: value
@@ -72,6 +72,13 @@ class ProfileCreationForm extends Component {
         return (
             <div className="profile-container">
                 <Form model="loginForm" onSubmit={values => this.handleSubmit(values)}>
+                <LoginProfileForm />
+                <SquareBasicsForm />
+                <CustomSquareForm />
+                <Button type="submit" className="btn typ-btn">start squaring!</Button>
+                </Form>
+                
+                {/* <Form model="loginForm" onSubmit={values => this.handleSubmit(values)}>
                 <Row className="form-group">
                         <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
                         <div className="col-sm-8">
@@ -87,7 +94,7 @@ class ProfileCreationForm extends Component {
                     <div>
                         <Button type="submit" className="btn typ-btn">start squaring!</Button>
                     </div>
-                </Form>
+                </Form> */}
             </div>
         );
     }

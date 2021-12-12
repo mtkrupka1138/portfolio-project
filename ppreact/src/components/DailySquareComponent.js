@@ -24,4 +24,8 @@ class DailySquare extends Component {
     }
 }
 
+function RenderSquareInputs() {
+    
+}
+
 export default DailySquare;

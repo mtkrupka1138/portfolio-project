@@ -26,7 +26,7 @@ class LoginProfileForm extends Component {
                         <p className="mini-p">set up account information</p>
                     </div>
                 </div>
-                <Form>
+                {/* <Form> */}
                     <Row className="form-group">
                         <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
                         <div className="col-sm-8">
@@ -51,7 +51,7 @@ class LoginProfileForm extends Component {
                             <input type="date" className="form-control" id="birthdate" /> 
                         </div>
                     </div>
-                </Form>
+                {/* </Form> */}
             </React.Fragment>
         );
     }

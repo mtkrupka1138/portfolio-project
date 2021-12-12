@@ -4,14 +4,14 @@ import { LocalForm } from 'react-redux-form';
 class CustomSquareForm extends Component {
     render() {
         return (
-            <LocalForm>
-                <div class="form-title">
+            // <LocalForm>
+            <React.Fragment>
+<div class="form-title">
             <div class="section-title">
                 <p class="sub-section-title">customize your square</p>
                 <p class="mini-p">create parts of your square unique to you (habit tracking anyone?)</p>
             </div>
         </div>
-        <form>
             <div class="form-group row">
                 <label for="email" class="col-sm-4 col-form-label">custom input 1</label>
                 <div class="col-sm-8">
@@ -42,9 +42,10 @@ class CustomSquareForm extends Component {
                     <input type="text" class="form-control" />
                 </div>
             </div>
-        </form>
+            </React.Fragment>
                 
-            </LocalForm>
+                
+            // </LocalForm>
         );
     }
 }

@@ -4,7 +4,8 @@ import { LocalForm } from 'react-redux-form';
 class SquareBasicsForm extends Component {
     render() {
         return (
-            <LocalForm>
+            // <LocalForm>
+                <React.Fragment>
                 <div className="form-title">
                     <div className="section-title">
                         <p className="sub-section-title">your square basics</p>
@@ -108,7 +109,9 @@ class SquareBasicsForm extends Component {
                 </div>
             </div>
         </form>
-            </LocalForm>
+                </React.Fragment>
+                
+            // /* </LocalForm> */
         );
     }
 }

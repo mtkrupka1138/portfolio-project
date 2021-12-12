@@ -21,4 +21,8 @@ class MainSquareView extends Component {
     }
 }
 
+function RenderSquares() {
+    
+}
+
 export default MainSquareView;
