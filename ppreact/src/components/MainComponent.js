@@ -36,7 +36,7 @@ class Main extends Component {
             <Header /> 
             <Switch>
                 <Route exact path='/home' component={LoginPage} />
-                <Route exact path='/profilecreation' component={ProfileCreationForm} />
+                <Route exact path='/profilecreation' render={() => <ProfileCreationForm postSquare={this.props.postSquare} /> } />
                 <Route exact path='/dailysquare' component={DailySquarePage} />
                 <Redirect to ='/home' />
             </Switch>
@@ -46,5 +46,15 @@ class Main extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        squares: state.squares,
+    };
+};
 
-export default withRouter(Main);
+const mapDispatchToProps = {
+    postSquare: (squareInfo) => (postSquare(squareInfo)),
+};
+
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

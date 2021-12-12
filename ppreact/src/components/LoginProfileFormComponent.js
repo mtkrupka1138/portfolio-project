@@ -12,9 +12,7 @@ class LoginProfileForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: '',
-            passwordValid: '',
+
         };
     }
 
@@ -28,7 +26,7 @@ class LoginProfileForm extends Component {
                         <p className="mini-p">set up account information</p>
                     </div>
                 </div>
-                <Form model="loginform" onSubmit={values => this.handleSubmit(values)}>
+                <Form>
                     <Row className="form-group">
                         <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
                         <div className="col-sm-8">

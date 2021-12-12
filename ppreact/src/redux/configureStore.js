@@ -1,7 +1,8 @@
-import { createStore, combineReducers } from 'redux';
-import { Reducer, initialState } from './reducer';
+import {createStore, combineReducers, applyMiddleware } from 'redux';
 import { createForms } from 'react-redux-form';
 import { LoginCredentials } from './forms';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 export const ConfigureStore = () => {
     const store = createStore(
@@ -9,7 +10,8 @@ export const ConfigureStore = () => {
             ...createForms({
                 loginForm: LoginCredentials
             })
-        })
+        }),
+        applyMiddleware(thunk, logger)
     );
 
     return store;
