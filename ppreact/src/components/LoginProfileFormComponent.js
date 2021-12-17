@@ -26,32 +26,30 @@ class LoginProfileForm extends Component {
                         <p className="mini-p">set up account information</p>
                     </div>
                 </div>
-                {/* <Form> */}
-                    <Row className="form-group">
-                        <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
-                        <div className="col-sm-8">
-                            <Control.text model=".username" id="username" name="username" className="form-control" />
-                        </div>
-                    </Row>
-                    <Row className="form-group">
-                        <Label htmlFor="password" className="col-sm-4 col-form-label">password</Label>
-                        <div className="col-sm-8">
-                            <Control.text model=".password" id="password" name="password" className="form-control" />
-                        </div>
-                    </Row>
-                    <div className="form-group row">
-                        <label for="passwordValid" className="col-sm-4 col-form-label">password validation</label>
-                        <div className="col-sm-8">
-                            <input type="passwordValid" className="form-control" id="passwordValid" />
-                        </div>
+                <Row className="form-group">
+                    <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
+                    <div className="col-sm-8">
+                        <Control.text model=".username" id="username" name="username" className="form-control" />
                     </div>
-                    <div className="form-group row">
-                        <label for="date" className="col-sm-4 col-form-label">birthdate</label>
-                        <div className="col-sm-8">
-                            <input type="date" className="form-control" id="birthdate" /> 
-                        </div>
+                </Row>
+                <Row className="form-group">
+                    <Label htmlFor="password" className="col-sm-4 col-form-label">password</Label>
+                    <div className="col-sm-8">
+                        <Control.text model=".password" id="password" name="password" className="form-control" />
                     </div>
-                {/* </Form> */}
+                </Row>
+                <Row className="form-group row">
+                    <Label htmlFor="passwordValid" className="col-sm-4 col-form-label">password validation</Label>
+                    <div className="col-sm-8">
+                        <Control.text model=".passwordValid" id="passwordValid" name="passwordValid" className="form-control" />
+                    </div>
+                </Row>
+                <Row className="form-group row">
+                    <Label htmlFor="birthdate" className="col-sm-4 col-form-label">birthdate</Label>
+                    <div className="col-sm-8">
+                        <Control.text model=".birthdate" id="birthdate" name="birthdate" className="form-control" /> 
+                    </div>
+                </Row>
             </React.Fragment>
         );
     }

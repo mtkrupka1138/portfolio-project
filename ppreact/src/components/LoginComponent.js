@@ -94,7 +94,7 @@ class Login extends Component {
                             <Link to='/profilecreation'><button type="button" className="btn typ-btn">create profile</button></Link>
                         </div>
                         <div className="col-3">
-                            <Link to='/dailysquare'><button type="button" className="btn typ-btn">sign in</button></Link>
+                            <Button type="submit" className="btn typ-btn">sign in</Button>
                         </div>
                     </Row>
                 </LocalForm>

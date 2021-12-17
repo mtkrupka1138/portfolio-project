@@ -2,6 +2,7 @@ export const LoginCredentials = {
     username: '',
     password: '',
     passwordValid: '',
+    birthdate: '',
     // basic square
     daysAlive: false,
     timeSleepAwake: false,

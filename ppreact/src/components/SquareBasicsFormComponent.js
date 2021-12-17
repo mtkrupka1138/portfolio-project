@@ -1,117 +1,113 @@
 import React, { Component } from 'react';
-import { LocalForm } from 'react-redux-form';
+import { Button, Col, Row, Label } from 'reactstrap';
+import { Control, Form, Errors } from 'react-redux-form';
 
 class SquareBasicsForm extends Component {
     render() {
         return (
-            // <LocalForm>
-                <React.Fragment>
+            <React.Fragment>
                 <div className="form-title">
                     <div className="section-title">
                         <p className="sub-section-title">your square basics</p>
                         <p className="mini-p">choose standard parts of your square to be included every day</p>
                     </div>
                 </div>
-        <form>
-            <div className="form-group row align-items-center justify-content-center">
-                <div className="col-6 text-left">
-                    <label className="typ-quest">Number of days you have been alive</label>
-                </div>
-                <div className="col-6 text-center">
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>y</span>
-                            <input className="form-check-input" type="radio" id="y-1" name="y-n1" value="yes" />
-                        </label>
+                <div className="form-group row align-items-center justify-content-center">
+                    <div className="col-6 text-left">
+                        <Label className="typ-quest">Number of days you have been alive</Label>
                     </div>
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>n</span>
-                            <input className="form-check-input" type="radio" id="n-1" name="y-n1" value="no" />
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div className="form-group row align-items-center justify-content-center">
-                <div className="col-6 text-left">
-                    <label className="typ-quest">what kind of exercise you did</label>
-                </div>
-                <div className="col-6 text-center">
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>y</span>
-                            <input className="form-check-input" type="radio" id="y-2" name="y-n2" value="yes" />
-                        </label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>n</span>
-                            <input className="form-check-input" type="radio" id="n-2" name="y-n2" value="no" />
-                        </label>
+                    <div className="col-6 text-center">
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>y</span>
+                                <Control className="form-check-input" type="radio" model=".y-1" id="y-1" name="y-1" value="yes" />
+                            </Label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>n</span>
+                                <Control className="form-check-input" type="radio" model=".n-1" id="n-1" name="n-1" value="no" />
+                            </Label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="form-group row align-items-center justify-content-center">
-                <div className="col-6 text-left">
-                    <label className="typ-quest">which food groups you ate from</label>
-                </div>
-                <div className="col-6 text-center">
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>y</span>
-                            <input className="form-check-input" type="radio" id="y-3" name="y-n3" value="yes" />
-                        </label>
+                <div className="form-group row align-items-center justify-content-center">
+                    <div className="col-6 text-left">
+                        <Label className="typ-quest">what kind of exercise you did</Label>
                     </div>
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>n</span>
-                            <input className="form-check-input" type="radio" id="n-3" name="y-n3" value="no" />
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div className="form-group row align-items-center justify-content-center">
-                <div className="col-6 text-left">
-                    <label className="typ-quest">did you travel anywhere</label>
-                </div>
-                <div className="col-6 text-center">
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>y</span>
-                            <input className="form-check-input" type="radio" id="y-4" name="y-n4" value="yes" />
-                        </label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>n</span>
-                            <input className="form-check-input" type="radio" id="n-4" name="y-n4" value="no" />
-                        </label>
+                    <div className="col-6 text-center">
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>y</span>
+                                <Control className="form-check-input" type="radio" model=".y-2" id="y-2" name="y-2" value="yes" />
+                            </Label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>n</span>
+                                <Control className="form-check-input" type="radio" model=".n-2" id="n-2" name="n-2" value="no" />
+                            </Label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="form-group row align-items-center justify-content-center">
-                <div className="col-6 text-left">
-                    <label className="typ-quest">did you remember your dreams</label>
-                </div>
-                <div className="col-6 text-center">
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>y</span>
-                            <input className="form-check-input" type="radio" id="y-5" name="y-n5" value="yes" />
-                        </label>
+                <div className="form-group row align-items-center justify-content-center">
+                    <div className="col-6 text-left">
+                        <Label className="typ-quest">which food groups you ate from</Label>
                     </div>
-                    <div className="form-check form-check-inline">
-                        <label className="form-check-label">
-                            <span>n</span>
-                            <input className="form-check-input" type="radio" id="n-5" name="y-n5" value="no" />
-                        </label>
+                    <div className="col-6 text-center">
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>y</span>
+                                <Control className="form-check-input" type="radio" model=".y-3" id="y-3" name="y-3" value="yes" />
+                            </Label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>n</span>
+                                <Control className="form-check-input" type="radio" model=".n-3" id="n-3" name="n-3" value="no" />
+                            </Label>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-                </React.Fragment>
-                
-            // /* </LocalForm> */
+                <div className="form-group row align-items-center justify-content-center">
+                    <div className="col-6 text-left">
+                        <Label className="typ-quest">did you travel anywhere</Label>
+                    </div>
+                    <div className="col-6 text-center">
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>y</span>
+                                <Control className="form-check-input" type="radio" model=".y-4" id="y-4" name="y-4" value="yes" />
+                            </Label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>n</span>
+                                <Control className="form-check-input" type="radio" model=".n-4" id="n-4" name="n-4" value="no" />
+                            </Label>
+                        </div>
+                    </div>
+                </div>
+                <div className="form-group row align-items-center justify-content-center">
+                    <div className="col-6 text-left">
+                        <Label className="typ-quest">did you remember your dreams</Label>
+                    </div>
+                    <div className="col-6 text-center">
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>y</span>
+                                <Control className="form-check-input" type="radio" model=".y-5" id="y-5" name="y-5" value="yes" />
+                            </Label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <Label className="form-check-label">
+                                <span>n</span>
+                                <Control className="form-check-input" type="radio" model=".n-5" id="n-5" name="n-5" value="no" />
+                            </Label>
+                        </div>
+                    </div>
+                </div>
+            </React.Fragment>
         );
     }
 }

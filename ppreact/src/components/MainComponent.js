@@ -37,7 +37,7 @@ class Main extends Component {
             <Switch>
                 <Route exact path='/home' component={LoginPage} />
                 <Route exact path='/profilecreation' render={() => <ProfileCreationForm postSquare={this.props.postSquare} /> } />
-                <Route exact path='/dailysquare' component={DailySquarePage} />
+                <Route exact path='/dailysquare' render={() => <DailySquare postSquare={this.props.postSquare} /> } />
                 <Redirect to ='/home' />
             </Switch>
         </div>
@@ -54,6 +54,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     postSquare: (squareInfo) => (postSquare(squareInfo)),
+    fetchSquares: () => (fetchSquares())
 };
 
 

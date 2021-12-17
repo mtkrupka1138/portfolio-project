@@ -4,6 +4,8 @@ import SquareBasicsForm from './SquareBasicsFormComponent';
 import CustomSquareForm from './CustomSquareFormComponent';
 import { Button, Row, Label } from 'reactstrap';
 import { Control, Form, Errors } from 'react-redux-form';
+import { Link } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom'
 
 
 class ProfileCreationForm extends Component {
@@ -14,6 +16,7 @@ class ProfileCreationForm extends Component {
             username: '',
             password: '',
             passwordValid: '',
+            birthdate: '',
             // basic square
             daysAlive: false,
             timeSleepAwake: false,
@@ -30,6 +33,7 @@ class ProfileCreationForm extends Component {
                 username: false,
                 password: false,
                 passwordValid: false,
+                birthdate: false,
                 daysAlive: false,
                 timeSleepAwake: false,
                 food: false,
@@ -64,6 +68,7 @@ class ProfileCreationForm extends Component {
 
     handleSubmit(values) {
           this.props.postSquare(values);
+          console.log(values);
       }
 
     
@@ -72,29 +77,12 @@ class ProfileCreationForm extends Component {
         return (
             <div className="profile-container">
                 <Form model="loginForm" onSubmit={values => this.handleSubmit(values)}>
-                <LoginProfileForm />
-                <SquareBasicsForm />
-                <CustomSquareForm />
-                <Button type="submit" className="btn typ-btn">start squaring!</Button>
+                    <LoginProfileForm />
+                    <SquareBasicsForm />
+                    <CustomSquareForm />
+                    <Link to='/dailysquare'><Button type="submit" className="btn typ-btn">start squaring!</Button></Link>
                 </Form>
-                
-                {/* <Form model="loginForm" onSubmit={values => this.handleSubmit(values)}>
-                <Row className="form-group">
-                        <Label htmlFor="username" className="col-sm-4 col-form-label">username</Label>
-                        <div className="col-sm-8">
-                            <Control.text model=".username" id="username" name="username" className="form-control" />
-                        </div>
-                    </Row>
-                    <Row className="form-group">
-                        <Label htmlFor="password" className="col-sm-4 col-form-label">password</Label>
-                        <div className="col-sm-8">
-                            <Control.text model=".password" id="password" name="password" className="form-control" />
-                        </div>
-                    </Row>
-                    <div>
-                        <Button type="submit" className="btn typ-btn">start squaring!</Button>
-                    </div>
-                </Form> */}
+
             </div>
         );
     }
