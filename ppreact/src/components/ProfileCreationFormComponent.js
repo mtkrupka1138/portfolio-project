@@ -68,7 +68,6 @@ class ProfileCreationForm extends Component {
 
     handleSubmit(values) {
           this.props.postSquare(values);
-          console.log(values);
       }
 
     
@@ -80,7 +79,7 @@ class ProfileCreationForm extends Component {
                     <LoginProfileForm />
                     <SquareBasicsForm />
                     <CustomSquareForm />
-                    <Link to='/dailysquare'><Button type="submit" className="btn typ-btn">start squaring!</Button></Link>
+                    <Button type="submit" className="btn typ-btn">start squaring!</Button>
                 </Form>
 
             </div>
